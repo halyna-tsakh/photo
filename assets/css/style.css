@@ -11,6 +11,7 @@
 }
 
 body {
+  overflow: hidden;
   font-family: Rubik, 'sans-serif';
   cursor: default;
 }
@@ -115,7 +116,7 @@ h3 {
 .swiper-button-next:after {
   position: absolute;
   width: 30px;
-  height: 5px;
+  height: 3px;
   background: #fff;
   content: '';
 }
@@ -128,7 +129,7 @@ h3 {
 }
 
 .swiper-button-prev:after {
-  top: 0;
+  top: 1px;
   right: 5px;
   transform: rotate(-45deg);
   transform-origin: top right;
@@ -142,13 +143,17 @@ h3 {
 }
 
 .swiper-button-next:after {
-  top: 0;
+  top: 1px;
   left: 5px;
   transform: rotate(45deg);
   transform-origin: top left;
 }
 
 @media screen and (max-width: 1300px) {
+  h2 {
+    margin-top: 20px;
+  }
+
   #gallery .swiper-container {
     display: block;
   }
