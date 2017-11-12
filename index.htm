@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Галя Цах</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <div id="layout">
+    <div id="content">
+      <div id="wrap">
+        <h1>Комерційна зйомка</h1>
+
+        <div id="gallery">
+          <div class="tiles">
+            <div class="tile">
+              <div class="image" style="background-image: url('./assets/images/1.jpg');"></div>
+              <div class="image hidden" style="background-image: url('./assets/images/7.jpg');"></div>
+            </div>
+
+            <div class="tile">
+              <div class="image" style="background-image: url('./assets/images/2.jpg');"></div>
+              <div class="image hidden" style="background-image: url('./assets/images/8.jpg');"></div>
+            </div>
+
+            <div class="tile">
+              <div class="image" style="background-image: url('./assets/images/3.jpg');"></div>
+              <div class="image hidden" style="background-image: url('./assets/images/9.jpg');"></div>
+            </div>
+
+            <div class="tile">
+              <div class="image" style="background-image: url('./assets/images/4.jpg');"></div>
+              <div class="image hidden" style="background-image: url('./assets/images/10.jpg');"></div>
+            </div>
+
+            <div class="tile">
+              <div class="image" style="background-image: url('./assets/images/5.jpg');"></div>
+              <div class="image hidden" style="background-image: url('./assets/images/11.jpg');"></div>
+            </div>
+
+            <div class="tile">
+              <div class="image" style="background-image: url('./assets/images/6.jpg');"></div>
+              <div class="image hidden" style="background-image: url('./assets/images/12.jpg');"></div>
+            </div>
+          </div>
+
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="image" style="background-image: url('./assets/images/1.jpg');"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image" style="background-image: url('./assets/images/2.jpg');"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image" style="background-image: url('./assets/images/3.jpg');"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image" style="background-image: url('./assets/images/4.jpg');"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image" style="background-image: url('./assets/images/5.jpg');"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image" style="background-image: url('./assets/images/6.jpg');"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image" style="background-image: url('./assets/images/7.jpg');"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image" style="background-image: url('./assets/images/8.jpg');"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image" style="background-image: url('./assets/images/9.jpg');"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image" style="background-image: url('./assets/images/10.jpg');"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image" style="background-image: url('./assets/images/11.jpg');"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="image" style="background-image: url('./assets/images/12.jpg');"></div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+
+        <h2>Галя Цах</h2>
+        <h3>фото та відео для вашого бізнесу</h3>
+
+        <div id="videoGallery">
+          <div class="video">
+            <video autoplay loop poster="./assets/images/poster1.jpg">
+              <source src="./assets/videos/1.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="video">
+            <video autoplay loop poster="./assets/images/poster2.jpg">
+              <source src="./assets/videos/2.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="video">
+            <video autoplay loop poster="./assets/images/poster3.jpg">
+              <source src="./assets/videos/3.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="video">
+            <video autoplay loop poster="./assets/images/poster4.jpg">
+              <source src="./assets/videos/4.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+        <div id="call">
+          <a href="tel:+380507530700">+38(050)753-07-00</a>
+        </div>
+        <div id="mail">
+          <a href="mailto:falangi30@gmail.com">falangi30@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+  <script>
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (isMobile) {
+      $('body').addClass('is-mobile');
+    }
+  </script>
+  <script src="./assets/js/gallery.js"></script>
+  <script src="./assets/js/videoGallery.js"></script>
+</body>
+</html>

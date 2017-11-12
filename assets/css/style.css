@@ -1,0 +1,240 @@
+/* Layout */
+
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: inherit;
+  color: inherit;
+}
+
+body {
+  font-family: Rubik, 'sans-serif';
+  cursor: default;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 40px;
+  color: #506773;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 40px;
+  letter-spacing: 2px;
+  margin-top: -10px;
+  color: #6B8A99;
+  text-align: center;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 300;
+  margin: -30px 0 40px;
+  color: #bbb;
+  text-align: center;
+}
+
+#layout {
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#content {
+  width: 100%;
+  max-width: 840px;
+  padding: 0 20px;
+}
+
+/* Gallery */
+
+#gallery .tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#gallery .tile {
+  width: 30%;
+  height: 200px;
+  margin-bottom: 40px;
+}
+
+#gallery .tile .image {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: no-repeat center center;
+  background-size: cover;
+  transition: opacity 0.8s;
+}
+
+#gallery .tile .image.hidden {
+  z-index: 2;
+  opacity: 0;
+}
+
+#gallery .swiper-container {
+  display: none;
+  width: 100%;
+  height: 400px;
+}
+
+#gallery .swiper-container .image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: no-repeat center center;
+  background-size: cover;
+  transition: opacity 0.5s;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background: transparent;
+}
+
+.swiper-button-prev:before,
+.swiper-button-next:before,
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  position: absolute;
+  width: 30px;
+  height: 5px;
+  background: #fff;
+  content: '';
+}
+
+.swiper-button-prev:before {
+  bottom: 0;
+  right: 5px;
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+}
+
+.swiper-button-prev:after {
+  top: 0;
+  right: 5px;
+  transform: rotate(-45deg);
+  transform-origin: top right;
+}
+
+.swiper-button-next:before {
+  bottom: 0;
+  left: 5px;
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+}
+
+.swiper-button-next:after {
+  top: 0;
+  left: 5px;
+  transform: rotate(45deg);
+  transform-origin: top left;
+}
+
+@media screen and (max-width: 1300px) {
+  #gallery .swiper-container {
+    display: block;
+  }
+
+  #gallery .tiles {
+    display: none;
+  }
+}
+
+.is-mobile #gallery .swiper-container {
+  display: block;
+}
+
+.is-mobile #gallery .tiles {
+  display: none;
+}
+
+/* Video Gallery */
+
+#videoGallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#videoGallery .video {
+  width: 48%;
+  height: 200px;
+}
+
+#videoGallery .video {
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 700px) {
+  #videoGallery {
+    flex-wrap: wrap;
+  }
+
+  #videoGallery .video {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Call link */
+
+#call,
+#mail {
+  margin: 40px 0;
+  text-align: center;
+}
+
+#mail {
+  margin-top: -20px;
+}
+
+#call a,
+#mail a {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  color: #506773;
+  text-decoration: none;
+}
+
+#call a:before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 30px;
+  height: 35px;
+  left: -35px;
+  background: url('../images/phone.png') no-repeat left center transparent;
+  background-size: contain;
+}
+
+.is-mobile #call a {
+  font-size: 20px;
+  border-color: #506773;
+}
+
+.is-mobile #call a:before {
+  width: 25px;
+  height: 20px;
+  top: 3px;
+}
